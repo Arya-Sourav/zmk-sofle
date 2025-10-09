@@ -16,6 +16,10 @@ if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
 config ZMK_SPLIT
     default y
 
+# User added
+config ZMK_HID_INDICATORS
+    default y
+
 if ZMK_DISPLAY
 
 config I2C
