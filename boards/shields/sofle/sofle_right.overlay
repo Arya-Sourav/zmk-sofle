@@ -5,9 +5,9 @@
  */
 
 #include "sofle.dtsi"
-// Right is main half not now
-&default_transform {
-    col-offset = <6>;
+// Right is main half
+// &default_transform {
+//     col-offset = <6>;
 };
 
 &kscan0 {
