@@ -47,13 +47,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            bindings = <
-                &mmv MOVE_UP        // Swipe Up → move mouse up
-                &mmv MOVE_DOWN      // Swipe Down → move mouse down
-                &mmv MOVE_LEFT      // Swipe Left → move mouse left
-                &mmv MOVE_RIGHT     // Swipe Right → move mouse right
-                &msc MB1            // Tap → left click
-                 >;
         };
 
         lower_layer {
@@ -74,13 +67,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            bindings = <
-                &mmv MOVE_UP        // Swipe Up → move mouse up
-                &mmv MOVE_DOWN      // Swipe Down → move mouse down
-                &mmv MOVE_LEFT      // Swipe Left → move mouse left
-                &mmv MOVE_RIGHT     // Swipe Right → move mouse right
-                &msc MB1            // Tap → left click
-                 >;
         };
 
         raise_layer {
@@ -100,13 +86,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            bindings = <
-                &mmv MOVE_UP        // Swipe Up → move mouse up
-                &mmv MOVE_DOWN      // Swipe Down → move mouse down
-                &mmv MOVE_LEFT      // Swipe Left → move mouse left
-                &mmv MOVE_RIGHT     // Swipe Right → move mouse right
-                &msc MB1            // Tap → left click
-                 >;
         };
 
         adjust_layer {
@@ -126,13 +105,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            bindings = <
-                &mmv MOVE_UP        // Swipe Up → move mouse up
-                &mmv MOVE_DOWN      // Swipe Down → move mouse down
-                &mmv MOVE_LEFT      // Swipe Left → move mouse left
-                &mmv MOVE_RIGHT     // Swipe Right → move mouse right
-                &msc MB1            // Tap → left click
-                 >;
         };
 
     };
