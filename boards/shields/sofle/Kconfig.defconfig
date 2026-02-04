@@ -23,13 +23,13 @@ if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
 config ZMK_SPLIT
     default y
 
-if ZMK_DISPLAY
-
 config I2C
     default y
 
 config ZMK_POINTING
 	default y
+
+if ZMK_DISPLAY
 
 config SSD1306
     default y
