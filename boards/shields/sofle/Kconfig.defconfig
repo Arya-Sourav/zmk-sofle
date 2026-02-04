@@ -8,9 +8,6 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
-
-config I2C
-	default y
       
 # User added
 ## config ZMK_HID_INDICATORS
