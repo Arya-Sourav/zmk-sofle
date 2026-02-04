@@ -9,6 +9,13 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+
+config I2C
+	default y
+      
+config ZMK_POINTING
+	default y
+
 # User added
 ## config ZMK_HID_INDICATORS
 ##     default y
@@ -24,6 +31,9 @@ if ZMK_DISPLAY
 
 config I2C
     default y
+
+config ZMK_POINTING
+	default y
 
 config SSD1306
     default y
