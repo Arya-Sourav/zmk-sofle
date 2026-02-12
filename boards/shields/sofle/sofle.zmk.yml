@@ -9,7 +9,6 @@ features:
   - keys
   - display
   - encoder
-  - touchpad
   - studio
 siblings:
   - sofle_left
