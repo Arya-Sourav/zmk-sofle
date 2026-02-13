@@ -27,7 +27,7 @@
         };
     };
 
-&led_strip { chain-length = <11>;}
+&led_strip { chain-length = <31>;}
 
     keymap {
         compatible = "zmk,keymap";
