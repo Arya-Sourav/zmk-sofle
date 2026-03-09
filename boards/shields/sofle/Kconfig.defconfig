@@ -12,6 +12,9 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config SPI
     default y
 
+config I2C
+    default y
+
 # User added
 ## config ZMK_HID_INDICATORS
 ##     default y
