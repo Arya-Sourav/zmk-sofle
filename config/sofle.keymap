@@ -27,8 +27,12 @@
         };
     };
 
+    // wakeup_scan: wakeup_scan {
+    //     compatible = "zmk,"
+    // }
+
     keymap {
-        compatible = "zmk,keymap";
+        compatible = "zmk,keymap,wakeup-sources";
 
         default_layer {
             display-name = "default";

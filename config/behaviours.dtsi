@@ -1,0 +1,17 @@
+//Behaviours def
+
+//Combos
+combos   {
+    compatible = "zmk,combos";
+
+    combo_soft_off_as   {
+        timeout-ms = <100>;
+        key-positions = <2 3 4>;
+        bindings = <&hw_soft_off>;
+    };
+    // combo_soft_wake: softwake {
+    //     timeout-ms = <100>;
+    //     key-positions = <2 3 4>;
+    //     bindings = <&soft_off_>;        
+    // };
+};
