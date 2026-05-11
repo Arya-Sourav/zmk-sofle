@@ -32,7 +32,7 @@
     // }
 
     keymap {
-        compatible = "zmk,keymap,wakeup-sources";
+        compatible = "zmk,keymap";
 
         default_layer {
             display-name = "default";
