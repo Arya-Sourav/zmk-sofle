@@ -46,7 +46,7 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <31>; /* arbitrary; change at will */
+        chain-length = <57>; /* arbitrary; change at will */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
         // compatible = "worldsemi,ws2812-gpio";
