@@ -10,74 +10,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/led/led.h>
-
-/* Disable UART0 — it uses P0.17/P0.20 by default, which conflicts with I2C0 (OLED) */
-&uart0 {
-    status = "disabled";
-};
-
-/* Disable SPI0 — it shares the same hardware peripheral as I2C0 (TWIM0) on nRF52840 */
-&spi0 {
-    status = "disabled";
-};
-
-&pinctrl {
-    spi3_default: spi3_default {
-        group1 {
-            psels = <
-                NRF_PSEL(SPIM_MOSI, 0, 06)
-            >;
-        };
-    };
-
-    spi3_sleep: spi3_sleep {
-        group1 {
-            psels = <
-                NRF_PSEL(SPIM_MOSI, 0, 06)
-
-            >;
-            low-power-enable;
-        };
-    };
-};
-
-&spi3 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-
-    pinctrl-0 = <&spi3_default>;
-    pinctrl-1 = <&spi3_sleep>;
-    pinctrl-names = "default", "sleep";
-
-    led_strip: ws2812@0 {
-        compatible = "worldsemi,ws2812-spi";
-
-        /* SPI */
-        reg = <0>; /* ignored, but necessary for SPI bindings */
-        spi-max-frequency = <4000000>;
-
-        /* WS2812 */
-        chain-length = <57>; /* arbitrary; change at will */
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-        // compatible = "worldsemi,ws2812-gpio";
-        // data-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
-        // chain-length = <31>;
-
-        color-mapping = <
-            LED_COLOR_ID_GREEN
-            LED_COLOR_ID_RED
-            LED_COLOR_ID_BLUE
-        >;
-    };
-};
-
-/ {
-    chosen {
-        zmk,underglow = &led_strip;
-    };
-};
 
 #define BASE 0
 #define LOWER 1
@@ -111,7 +43,7 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
-&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp ADJUST
+&ext_power EP_TOG &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp ADJUST
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B      &kp C_MUTE &kp ADJUST   &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
