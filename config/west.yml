@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: AYM1607
       url-base: https://github.com/AYM1607
+    - name: Arya-Sourav
+      url-base: https://github.com/Arya-Sourav
   projects:
     - name: zmk
       remote: zmkfirmware
