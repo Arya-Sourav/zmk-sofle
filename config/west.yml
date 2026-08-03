@@ -12,5 +12,8 @@ manifest:
     - name: zmk-rgbled-widget 
       remote: caksoylar
       revision: main
+    - name: zmk-tron-lighting
+      remote: Arya-Sourav
+      revision: main
   self:
     path: config
