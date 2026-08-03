@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: Arya-Sourav
+      url-base: https://github.com/Arya-Sourav
   projects:
     - name: zmk
       remote: zmkfirmware
