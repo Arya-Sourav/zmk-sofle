@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: caksoylar
       url-base: https://github.com/caksoylar
-    - name: Arya-Sourav
-      url-base: https://github.com/Arya-Sourav
+    - name: cormoran
+      url-base: https://github.com/cormoran
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,8 +14,8 @@ manifest:
     - name: zmk-rgbled-widget 
       remote: caksoylar
       revision: main
-    - name: zmk-tron-lighting
-      remote: Arya-Sourav
+    - name: zmk-driver-animation
+      remote: cormoran
       revision: main
   self:
     path: config
