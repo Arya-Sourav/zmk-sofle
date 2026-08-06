@@ -7,39 +7,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/josefadamcik/sofle.dtsi>
 
-#include <zmk_driver_animation/animation.dtsi>
-#include <behaviors/animation_control.dtsi>
-#include <dt-bindings/zmk_driver_animation/animation_control.h>
-
-/ {
-    chosen {
-        zmk,animation = &animation;
-        zmk,animation-control = &animation_control0;
-    };
-
-    animation: animation {
-        compatible = "zmk,animation";
-        drivers = <&led_strip>;
-        chain-lengths = <1>;
-        pixels = <&pixel 0 0>;
-    };
-
-    animation_solid0: animation_solid_0 {
-        compatible = "zmk,animation-solid";
-        pixels = <0>;
-        colors = <HSL(120, 100, 50)>;
-    };
-
-    animation_control0: animation_control_0 {
-        compatible = "zmk,animation-control";
-        label = "ANIMATION_CONTROL";
-        powered-animations = <&animation_solid0>;
-        battery-animations = <&animation_solid0>;
-        behavior-animations = <&animation_solid0>;
-    };
-};
-
-
 &josefadamcik_sofle_layout {
     transform = <&default_transform>;
 };
