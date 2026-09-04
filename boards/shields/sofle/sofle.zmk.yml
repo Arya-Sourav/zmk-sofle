@@ -9,7 +9,6 @@ features:
   - keys
   - display
   - encoder
-  - pointer
   - studio
 siblings:
   - sofle_left
